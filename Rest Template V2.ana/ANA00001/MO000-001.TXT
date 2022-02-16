@@ -1,0 +1,9 @@
+//MO000-001.TXT ANA00000 TO ANA00001
+Utilisateur		NFI		nouveau fichier
+Token		NFI		nouveau fichier
+Role_Utilisateur		NFI		nouveau fichier
+Role		NFI		nouveau fichier
+Contrainte_Utilisateur_Role		NWL	Utilisateur (Id) et Role_Utilisateur (UtilisateurId)	Nouvelle liaison entre les fichiers Utilisateur (Id) et Role_Utilisateur (UtilisateurId)
+Contrainte_Role_Utilisateur		NWL	Role (Id) et Role_Utilisateur (RoleId)	Nouvelle liaison entre les fichiers Role (Id) et Role_Utilisateur (RoleId)
+Contrainte_Utilisateur_Token		NWL	Utilisateur (Id) et Token (UtilisateurId)	Nouvelle liaison entre les fichiers Utilisateur (Id) et Token (UtilisateurId)
+Role		FRN		

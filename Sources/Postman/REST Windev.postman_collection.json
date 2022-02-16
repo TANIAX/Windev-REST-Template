@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "88d512fd-2356-4e3b-8c55-6cacf1c1ed6b",
+		"name": "REST Windev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "No-Auth",
+								"value": "True",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"monEmail@gmail.com\",\r\n\t\"password\" : \"monPassword\",\r\n    \"rememberMe\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Refresh",
+								"value": "token",
+								"type": "text"
+							},
+							{
+								"key": "Auth",
+								"value": "token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Auth",
+								"value": "token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot-password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "No-Auth",
+								"value": "True",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"monEmail@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "No-Auth",
+								"value": "True",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"token\",\r\n    \"id\": 1,\r\n    \"password\": \"newPassword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Ajout",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyAiYWxnIjoiSFMyNTYiLCAidHlwIjoiSldUIiB9.eyAiaWF0IjoxNjE3Nzg1NjYwLCAiZXhwIjoxNjE3NzkyODYwLCAibWVtYmVyX2lkIjowIH0.9diOmJ0NRFLi9FrKNlOOl-RNYzbN8mse9NlC2M-xrfM",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Auth",
+								"value": "eyAiYWxnIjoiSFMyNTYiLCAidHlwIjoiSldUIiB9.eyAiaWF0IjoxNjQ1MDMyNTI3LCAiZXhwIjoxNjQ1MDM5NzI3LCAicm9sZXMiOlsgIlV0aWxpc2F0ZXVyIiwgIk1lbWJyZSIsICJBZG1pbmlzdHJhdGV1ciIgXSwgInVzZXJJZCI6MSB9.p4tvGgveWJzpU1lKgAPALPiXVyTslfMZCrH6AEkDoLE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\" : \"monEmail@gmail.com\",\r\n    \"Nom\" : \"Nom de famille\",\r\n    \"Prénom\" : \"Prenom\",\r\n    \"Téléphone\" : \"0497000000\",\r\n    \"Mobile\" : \"0497000000\",\r\n    \"Civilité\" : 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Liste",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Auth",
+								"value": "eyAiYWxnIjoiSFMyNTYiLCAidHlwIjoiSldUIiB9.eyAiaWF0IjoxNjQ1MDI5NDYxLCAiZXhwIjoxNjQ1MDM2NjYxLCAicm9sZXMiOlsgIF0sICJ1c2VySWQiOjEgfQ.XCe78y660BOoxSJEwu1cy3b7CE44NRQUPPJUTsTkasI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modifie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Auth",
+								"value": "eyAiYWxnIjoiSFMyNTYiLCAidHlwIjoiSldUIiB9.eyAiaWF0IjoxNjQ1MDMzOTc4LCAiZXhwIjoxNjQ1MDQxMTc4LCAicm9sZXMiOlsgIlV0aWxpc2F0ZXVyIiwgIk1lbWJyZSIsICJBZG1pbiIgXSwgInVzZXJJZCI6MSB9.4Sk35DxGJqNH-0sVzZD-5EfaPO1dI7dp3VH-WBFT1sQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IDClient\" : 2,\r\n    \"Email\" : \"monEmail@gmail.commodif\",\r\n    \"Nom\" : \"Nom de famillemodif\",\r\n    \"Prénom\" : \"Prenommodif\",\r\n    \"Téléphone\" : \"modif\",\r\n    \"Mobile\" : \"modif\",\r\n    \"Civilité\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supprime",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Auth",
+								"value": "eyAiYWxnIjoiSFMyNTYiLCAidHlwIjoiSldUIiB9.eyAiaWF0IjoxNjQ1MDMzOTc4LCAiZXhwIjoxNjQ1MDQxMTc4LCAicm9sZXMiOlsgIlV0aWxpc2F0ZXVyIiwgIk1lbWJyZSIsICJBZG1pbiIgXSwgInVzZXJJZCI6MSB9.4Sk35DxGJqNH-0sVzZD-5EfaPO1dI7dp3VH-WBFT1sQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/client/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"client",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lit",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Auth",
+								"value": "eyAiYWxnIjoiSFMyNTYiLCAidHlwIjoiSldUIiB9.eyAiaWF0IjoxNjQ1MDMzOTc4LCAiZXhwIjoxNjQ1MDQxMTc4LCAicm9sZXMiOlsgIlV0aWxpc2F0ZXVyIiwgIk1lbWJyZSIsICJBZG1pbiIgXSwgInVzZXJJZCI6MSB9.4Sk35DxGJqNH-0sVzZD-5EfaPO1dI7dp3VH-WBFT1sQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/client/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"client",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

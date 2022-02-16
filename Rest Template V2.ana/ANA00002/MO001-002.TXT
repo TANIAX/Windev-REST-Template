@@ -1,0 +1,18 @@
+//MO001-002.TXT ANA00001 TO ANA00002
+Client		NFI		nouveau fichier
+Client	IDClient	RRN		
+Client	Société	RRN		
+Client	Civilité	RRN		
+Client	Nom	RRN		
+Client	Prénom	RRN		
+Client	Prénom2	RRN		
+Client	Téléphone	RRN		
+Client	Mobile	RRN		
+Client	Fax	RRN		
+Client	Email	RRN		
+Client	Type	RRN		
+Client	IBAN	RRN		
+Client	EnCoursAutorisé	RRN		
+Client	AdresseIP	RRN		
+Client	Photo	RRN		
+Client	MotDePasse	RRN		
