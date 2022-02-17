@@ -1,3 +1,4 @@
+Rest Template V2.wdp
 Rest Template V2.wdd
 Sources\Classes\MUtilisateur.wdc
 Sources\Classes\cException.wdc
@@ -30,7 +31,7 @@ Sources\Classes\MClient.wdc
 Sources\Classes\MRole.wdc
 Sources\Classes\CVM_UtilisateurMinimum.wdc
 Sources\Classes\CRequêteMotDePasseOublié.wdc
-Sources\Classes\CRequêteIntervenantResetMotDePasse.wdc
+Sources\Classes\CRequêteUtilisateurtResetMotDePasse.wdc
 Sources\Classes\CExceptionForbidden.wdc
 Sources\Classes\CRequêteUtilisateurNouveauMotDePasse.wdc
 Sources\Classes\CExceptionMethodNotAllowed.wdc
